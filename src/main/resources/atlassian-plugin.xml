@@ -1,0 +1,19 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+    </plugin-info>
+    <ao key="ao-module">
+    	<description>Konfiguriert alle Entities, die von ActiveObjects gemanagt werden sollen</description>
+    	<entity>de.schakko.confluence.macro.exchange.domain.Configuration</entity>
+    	<entity>de.schakko.confluence.macro.exchange.domain.LocalContact</entity>
+    	<entity>de.schakko.confluence.macro.exchange.domain.LocalFolder</entity>
+    	<entity>de.schakko.confluence.macro.exchange.domain.LocalAddress</entity>
+    	<entity>de.schakko.confluence.macro.exchange.domain.StringBag</entity>
+    </ao>
+
+    <xhtml-macro name="testmacro" class="de.schakko.confluence.macro.exchange.ExchangeContactMacro" key="my-macro">
+        <parameters/>
+    </xhtml-macro>
+</atlassian-plugin>
